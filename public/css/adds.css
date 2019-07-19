@@ -1,0 +1,32 @@
+body{
+    margin:0px 0px;
+}
+
+.content-principal{
+
+}
+
+.content-form{
+    width:550px;
+    margin: auto auto;
+    margin-top:100px;
+    padding:40px 30px;
+    border-radius:1px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content-form h2{
+    text-align:center;
+    margin:0px 0px 30px 0px;
+    color:white;
+}
+
+.div-boton{
+    width:150px;
+    color: #fff;
+    background-color: #378E92  !important;
+    margin: 0px 170px;
+    border-radius:1px !important; 
+}
+
+

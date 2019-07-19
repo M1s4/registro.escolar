@@ -1,0 +1,76 @@
+.content-home{
+    display: flex;
+    height: 950px;
+    font-size:2rem;
+    width:100% !important;
+  }
+  
+  .content-right{  
+    width:80%;
+    background-color: white;
+  }
+
+  .content-left {
+     width:20%;
+    background-color: #bd5d38;
+  }
+
+  .content-imagen{
+    width:100%;
+    height: auto;
+    margin-top:10% ;
+
+  }
+
+  .content-menu-user{
+      width:100%;
+      height:auto;
+  }
+
+  .content-menu-user div{
+      width:100%;
+      height:60px;
+  }
+
+
+
+  .imagen_estudiante{
+      width: 200px;
+      height:200px;
+    position:relative;
+    margin:auto auto;
+  }
+  
+  .imagen_estudiante img{
+    position:relative;  
+    width:200px;
+      height:200px;
+      border-radius:100px;
+  }
+
+
+
+  .content-menu-user{
+      text-align:center;
+      font-size: 22px;
+      color:white !important;
+      padding-top:20px;
+    font-weight: 800;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+  }
+
+  .content-menu-user a{
+
+    color:rgba(255,255,255,.5);
+  }
+
+  .content-menu-user a:hover{
+
+    color:#fff;
+    text-decoration: none;
+  }
+
+  img.img_perfil {
+    border: 10px solid white;
+}
