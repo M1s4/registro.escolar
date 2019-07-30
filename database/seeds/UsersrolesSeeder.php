@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RolSeeder extends Seeder
+class usersroles extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,14 +11,11 @@ class RolSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('rol')->insert([
+     $roles = DB::select('SELECT id_rol FROM rol WHERE nombre_rol="Estudiante"');
+     dd($roles);
+        DB::table('usersroles')->insert([
             'nombre_rol' => 'Estudiante',
 
-        ]);
-
-        DB::table('rol')->insert([
-            'nombre_rol' => 'Maestro',
-           
         ]);
     }
 }

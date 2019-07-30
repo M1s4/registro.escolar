@@ -13,13 +13,22 @@ class CicloSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ciclo')->insert([
-            'nombre_ciclo' => '2019A',
+        DB::table('cicloescolar')->insert([
+            'nombre' => '2019A',
 
         ]);
 
-        DB::table('ciclo')->insert([
-            'nombre_ciclo' => '2019B',
+        DB::table('cicloescolar')->insert([
+            'nombre' => '2019B',
+
+        ]);
+
+        DB::table('cicloescolar')->insert([
+            'nombre' => '2020A',
+
+        ]);
+        DB::table('cicloescolar')->insert([
+            'nombre' => '2020B',
 
         ]);
     }

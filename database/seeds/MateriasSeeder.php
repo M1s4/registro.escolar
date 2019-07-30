@@ -12,7 +12,14 @@ class MateriasSeeder extends Seeder
      * @return void
      */
     public function run()
+    
     {
+
+         \App\Materias::create([
+             'nombre' => 'Redes',
+         ]);
+
+/*/
         DB::table('materias')->insert([
             'nombre' => 'Redes',
 
@@ -27,5 +34,15 @@ class MateriasSeeder extends Seeder
             'nombre' => 'Quimica',
 
         ]);
+
+        DB::table('materias')->insert([
+            'nombre' => 'Algebra',
+
+        ]);
+
+        DB::table('materias')->insert([
+            'nombre' => 'Programacion',
+
+        ]);*/
     }
 }

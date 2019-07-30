@@ -8,17 +8,18 @@
 </head>
 <body>
     
-    <h1>Listando un array con nombres silumando una BD con un ORM</h1>
+    <h1>Lista de alumnos y materias a las que se registro</h1>
            
 
 
 
         <hr>
             <ul>
-               @forelse($users as $users)
-                   <li>{{$users}}</li>
+               @forelse($usuarios as $usuarios)
+                   <li>{{ $usuarios -> nombre }}</li>
+                   <li>{{ $usuarios -> email }}</li>
                  @empty 
-                   <li>No ahi usuario sregistrados</li>
+                   <li>No ahi usuario registrados</li>
                 @endforelse
             </ul>
        

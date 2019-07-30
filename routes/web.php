@@ -12,43 +12,12 @@
 */
 
 Route::get('/', function () {
-    return 'Home'; 
+    return view('login'); 
 });
 
 
-/*
-//Ruta de pruebas usuarios 
-  //se dejan como ejemplo de como crear otras rutas
-Route::get('usuarios', 'UserController@index');
-
-Route::get('/usuarios/{id}', 'UserController@show')
- ->where('id', '[0-9]+');
-
-Route::get('/usuarios/nuevo', 'UserController@create');
-
-Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController@index');
-//Fin de rutas de prueba  
-
- //Rutas hacia la pagina de registro principal
-Route::get('/registro', 'RegistroController@index');
 
 
-//Ruta hacia registro pero de las materias, seria la segunda parte de los registros
-//Route::post('/registro/alumnos', 'RegistroController@materias');
-
-
-//ruta hacia el formulario de alumnos
-
-//Route::get('/registro', 'RegistroController@index');
-Route::get('registro', 'RegistroController@crear');
-
-//Ruta tipo post del formulario para alumnos
-Route::post('registro/alumnos', 'RegistroController@store');
-
-//Ruta hacia la pagina de registro de maestros
-Route::get('registro/maestros', 'RegistroController@maestros');
-
-*/
 //Aqui comienzan las rutas hacia el proyecto con vision final
 
        //Rutas hacia ellogin
@@ -57,9 +26,13 @@ Route::get('login', 'RegistroController@login');
 //Ruta hacia el registro 
  Route::get('registrar', 'RegistroController@registrar');
 
-//ruta hacia el home
-Route::get('home', 'RegistroController@home');
+//
 
+//ruta hacia el home
+Route::get('admin', 'RegistroController@admin');
+
+//ruta que lista a los usuarios
+Route::get('usuarios', 'RegistroController@users');
 
 
 //Ruta hacia el adminLTE de bootstrap3

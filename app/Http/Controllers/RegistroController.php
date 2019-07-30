@@ -53,11 +53,28 @@ class RegistroController extends Controller
         return view('registro');
     }
 
-    public function home(){
-        $users=DB::table('materias')->get();
-        return view('home', compact('users'));
-       
+    public function admin(){
+        $materias=DB::table('materias')->get();
+        $usuarios=DB::table('usuarios')->get();
+        
+          return view('admin', compact('materias', 'usuarios'));
+        }
+        
+    public function users(){
+        $usuarios=DB::table('usuarios')->get();
+          
+        return view('users', compact('usuarios')
+       );
+
+
+    }
+
+
     
+    public function listar(){
+         
+        return view ('listar');
+
     }
 
 

@@ -13,18 +13,18 @@ class MaestrosSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('maestros')->insert([
-            'nombre' => 'Maestro_uno',
+        DB::table('profesor')->insert([
+            'nombre' => 'Padilla',
 
         ]);
 
-        DB::table('maestros')->insert([
-            'nombre' => 'Maestro_dos',
+        DB::table('profesor')->insert([
+            'nombre' => 'Ramos',
 
         ]);
 
-        DB::table('maestros')->insert([
-            'nombre' => 'Maestro_tres',
+        DB::table('profesor')->insert([
+            'nombre' => 'Ernesto',
 
         ]);
     }

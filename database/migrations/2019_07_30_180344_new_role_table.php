@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CicloEscolar extends Migration
+class NewRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CicloEscolar extends Migration
      */
     public function up()
     {
-        Schema::create('cicloEscolar', function (Blueprint $table) {
-            $table->primary('id_ciclo');
-            $table->string('nombre');  
-         
-          
+        Schema::create('rol', function (Blueprint $table) {
+            $table->increments('id_rol');
+            $table->string('nombre_rol')->unique();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ class CicloEscolar extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rol');
     }
 }

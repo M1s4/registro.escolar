@@ -35,13 +35,25 @@
 
               <!--content right -->
               <div class="content-right">
-                   
-                   @forelse ($users as $users)
-                       <li>{{ $users ->nombre }}</li>
-                       
+            <!--Aqui listamos de la tabla materias el nombre y el id de la materia -->
+                   @forelse ($materias as $materias)
+                       <li>{{ $materias ->nombre }}</li>
+                       <li>{{ $materias ->id_materias }}</li>
                    @empty
-                    <li>No hay usuarios registrados</li>
+                    <li>No se registraron usuarios</li>
                    @endforelse
+            <!--Aqui listamos de la tabla usuarios el nombre y el correo del usuario -->
+
+                   @forelse ($usuarios as $usuarios)
+                   <li>{{ $usuarios ->id_usuario }}</li>
+                       <li>{{ $usuarios ->nombre }}</li>
+                       <li>{{ $usuarios ->email }}</li>
+                   @empty
+                    <li>No hay materias registradas</li>
+                   @endforelse
+
+
+         
 
               </div>
               <!--FINcontent left -->
