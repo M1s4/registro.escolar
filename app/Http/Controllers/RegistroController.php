@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Registro;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+ 
 class RegistroController extends Controller
 {
     
@@ -27,20 +27,36 @@ class RegistroController extends Controller
     {
         return view ('alumnos');        
     }
-
-    public function store()
+*/
+    public function store(Request $request)
     {
-         /* User::crear([
-              'nombre'=> 'Misael',
-              'edad'=> '14',
-              'pass'=> bcrypt(12345)
-            
-          ]);
-         return 'Procesando informacion';
+      
+      $name = $request -> input ('nombre');
+      $pass = $request -> input ('password');
+      $email = $request -> input ('correo');
+      DB::table('usuarios')->insert([
+           'nombre' =>$name,
+           'password' =>$pass,
+           'email' =>$email,    
+      ]);
+      
+      
+      
+      
+      
+        /*
+        $data = request()->all();
+
+          User::create([
+              'nombre'=> $data['nombre'],
+              'password'=> bcrypt($data['password']),
+              'email' =>$data['correo'],            
+          ]);*/
+         return 'Se registro coreectamente el usuario';
 
     }
      
-*/
+
 /*Aqui coienzan los controladores hacia las vistas del proyecto ya mas aterrizado */
     public function login()
     {

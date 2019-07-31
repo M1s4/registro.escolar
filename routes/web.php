@@ -34,7 +34,7 @@ Route::get('admin', 'RegistroController@admin');
 //ruta que lista a los usuarios
 Route::get('usuarios', 'RegistroController@users');
 
-
+Route::post('usuarios/crear', 'RegistroController@store');
 //Ruta hacia el adminLTE de bootstrap3
 //Route::get('/lte', 'InicioController@index');
 
