@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Registro;
+
+use App\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
  
@@ -30,31 +31,58 @@ class RegistroController extends Controller
 */
     public function store(Request $request)
     {
-      
-      $name = $request -> input ('nombre');
-      $pass = $request -> input ('password');
-      $email = $request -> input ('correo');
-      DB::table('usuarios')->insert([
-           'nombre' =>$name,
-           'password' =>$pass,
-           'email' =>$email,    
-      ]);
-      
-      
-      
-      
-      
-        /*
-        $data = request()->all();
 
-          User::create([
-              'nombre'=> $data['nombre'],
-              'password'=> bcrypt($data['password']),
-              'email' =>$data['correo'],            
-          ]);*/
-         return 'Se registro coreectamente el usuario';
+        $data=request()->all();
+
+           Usuarios::create([
+                'nombre'=> $data['nombre'],
+                'password'=> $data['contrasena'],
+                'email'=> $data['correo'],
+                
+           ]);
+
+    
+           return redirect()->back()->with(['message' => 'Se creo usuario correctamente']);
+
+        
+      
 
     }
+      /*
+
+        $errors =  $request->validate(
+            [   
+                'nombre' => 'required',
+                'contrasena' => 'required',
+                'correo' => 'required', 
+          ], [
+              'nombre.required' => 'El campo nombre es obligatorio'
+          ]
+        );
+
+        if($errors){
+            return redirect()->back()->with(['errors' => $errors]);
+        }
+      
+        $users =  new Usuario;
+        $users->fill($data->all());
+        $users->save();
+
+        return redirect()->route('user/registrar')->with(['message' => 'Creado correctamente']);
+
+      /*
+      $data = request()->validate([
+
+            'nombre' => 'required',
+            'contrasena' => 'required',
+            'correo' => 'required', 
+      ], [
+          'nombre.required' => 'El campo nombre es obligatorio'
+      ]);
+        
+      */
+
+     
      
 
 /*Aqui coienzan los controladores hacia las vistas del proyecto ya mas aterrizado */
@@ -62,6 +90,17 @@ class RegistroController extends Controller
     {
 
           return view('login');   
+    }
+
+
+    public function validate_data($request){
+        /*
+            codigo de validaciones
+        */
+
+        //si tiene error regresar al formulario anterior
+
+        // return $request
     }
 
 

@@ -14,11 +14,9 @@
             </div><div class="form-row">
               <div class="form-group col-md-6">
                 
-                <input type="text" class="form-control" id="inputEmail4" placeholder="usuario" name="usuario">
-              </div>
-              <div class="form-group col-md-6">
+                
               
-                <input type="password" class="form-control" id="inputPassword4" placeholder="password" name="password">
+                <input type="password" class="form-control" id="inputPassword4" placeholder="password" name="contrasena">
               </div>
             </div>
             
@@ -26,7 +24,7 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                   <input type="email" class="form-control" id="inputCity" placeholder="Correo electronico" name="correo">
-              </div>
+            </div>
               <div class="form-group col-md-4">
                     <select id="inputState" class="form-control" name="rol">
                   <option selected="" disabled="">Rubro</option>
