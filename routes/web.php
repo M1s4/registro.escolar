@@ -23,6 +23,9 @@ Route::get('/', function () {
        //Rutas hacia ellogin
 Route::get('login', 'RegistroController@login');
 
+Route::post('usuarios/login', 'Auth\LoginController@login');
+
+
 //Ruta hacia el registro 
  Route::get('registrar', 'RegistroController@registrar');
 
@@ -38,9 +41,15 @@ Route::post('usuarios/crear', 'RegistroController@store');
 //Ruta hacia el adminLTE de bootstrap3  
 //Route::get('/lte', 'InicioController@index');
 
+//Ruta para editar materias
+Route::get('usuarios/{id}/editar', 'RegistroController@editar');
 
 
 
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

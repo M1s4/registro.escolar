@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Usuarios;
+use App\{Usuarios, Student};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
  
@@ -31,8 +31,20 @@ class RegistroController extends Controller
 */
     public function store(Request $request)
     {
+     //llamamos a las tabla rol para vaciarla dentro del select
+     //$data=request()->all();
+     
+  
+        $data = request()->validate([
 
-        $data=request()->all();
+            'nombre' => 'required',
+            'contrasena' => 'required',
+            'correo' => 'required',
+        
+            
+      ], [
+          'nombre.required' => 'El campo nombre es obligatorio'
+      ]);
 
            Usuarios::create([
                 'nombre'=> $data['nombre'],
@@ -41,9 +53,15 @@ class RegistroController extends Controller
                 
            ]);
 
-    
-           return redirect()->back()->with(['message' => 'Se creo usuario correctamente']);
+          
+           return redirect()->action('RegistroController@login');
+          //argumento back devuelve a la pagina de atras                                  
+          // return redirect()->back()->with(['message' => 'Se creo usuario correctamente']);
 
+
+
+
+           
         
       
 
@@ -64,8 +82,8 @@ class RegistroController extends Controller
             return redirect()->back()->with(['errors' => $errors]);
         }
       
-        $users =  new Usuario;
-        $users->fill($data->all());
+        $student =  new Usuario;
+        $student->fill($data->all());
         $users->save();
 
         return redirect()->route('user/registrar')->with(['message' => 'Creado correctamente']);
@@ -118,12 +136,15 @@ class RegistroController extends Controller
     public function users(){
         $usuarios=DB::table('usuarios')->get();
           
-        return view('users', compact('usuarios')
-       );
+        return view('users', compact('usuarios'));
 
 
     }
+       
 
+    public function edit(){
+         
+    }
 
     
     public function listar(){

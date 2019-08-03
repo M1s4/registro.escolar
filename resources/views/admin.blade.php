@@ -36,79 +36,51 @@
               <!--content right -->
               <div class="content-right">
 
-              <div class="content-resultado"
+              <div class="content-resultado">
             <!--Aqui listamos de la tabla materias el nombre y el id de la materia -->
-                   @forelse ($materias as $materias)
-                      
-                       <div class="materia">        
-                       <h3> Materia</h3>
-                       {{ $materias ->nombre }}
-                       
-                       </div>
-                   @empty
-                    <div>No se registraron usuarios</div>
-                   @endforelse
+                 
             <!--Aqui divstamos de la tabla usuarios el nombre y el correo del usuario -->
                  
-                   @forelse ($usuarios as $usuarios)
                    
-                       <div class="nombre">
-                       <h3>Nombre de usuario</h3>
-                          {{ $usuarios ->nombre }}
-                    <h3>Correo</h3>
-                              {{ $usuarios ->email }}
-                        </div>  
-                    
-                     
-                    <div class="correo">
-                         
-                    
-                    </div>                  
-                   @empty
-                    <div>No hay materias registradas</div>
-                   @endforelse
 
 
           </div>
           
-               <!--tabla de bootstrap --> 
-               <table class="table table-sm">
+      <table class="table table-borderless">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Usuario</th>
+      <th scope="col">Materias</th>
+      <th scope="col">Usuarios</th>
       <th scope="col">Correo</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>
-      @forelse ($materias as $materias)
-      {{ $materias ->nombre }}
-      @endforelse
-      @empty
-                    <div>No se registraron usuarios</div>
-      </td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td> @forelse ($materias as $materias)
+                      
+                      <div class="materia">        
+                     
+                      {{ $materias ->nombre }}
+                      
+                      </div>
+                  @empty
+                   <div>No se registraron usuarios</div>
+                  @endforelse</td>
+                  <td>
+    @forelse ($usuarios as $usuarios)                  
+                   <div class="nombre">                   
+                      {{ $usuarios ->nombre }}              
+                    </div>             
+               @empty
+                <div>No hay materias registradas</div>
+               @endforelse               
+               </td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    </tr> 
   </tbody>
 </table>
-
-               <!--fin tabla bootstrat -->
          
 
               </div>

@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-   public function Materias(){
-       return $this->belongsTo(Materias::class, 'id_materias');
-   }
+    protected $fillable=['id_student', 'id_materia', 'iduser'];
+    
+      public function Usuarios(){
+        return $this->hasmany('App\Usuarios');
+    }
 }

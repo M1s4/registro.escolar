@@ -19,6 +19,21 @@ class MateriasSeeder extends Seeder
              'nombre' => 'Redes',
          ]);
 
+         \App\Materias::create([
+            'nombre' => 'Fisica',
+        ]);
+
+        \App\Materias::create([
+            'nombre' => 'Quimica',
+        ]);
+
+        \App\Materias::create([
+            'nombre' => 'Algebra',
+        ]);
+        \App\Materias::create([
+            'nombre' => 'Programacion',
+        ]);
+
 /*/
         DB::table('materias')->insert([
             'nombre' => 'Redes',

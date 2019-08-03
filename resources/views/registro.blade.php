@@ -10,50 +10,31 @@
           {!!csrf_field() !!}
             <div class="form-group">
        
-              <input type="text" class="form-control" id="inputAddress" placeholder="Nombre completo" name="nombre">
-            </div><div class="form-row">
-              <div class="form-group col-md-6">
-                
-                
-              
-                <input type="password" class="form-control" id="inputPassword4" placeholder="password" name="contrasena">
-              </div>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Nombre completo" name="nombre" required>
             </div>
             
+            <div class="form-row">
+              
+               <div class="form-group col-md-6">    
+                 <input type="password" class="form-control" id="inputPassword4" placeholder="password" name="contrasena" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" id="inputCity" placeholder="correo" name="correo" required>
+                </div>
+             
+            </div>            
            
             <div class="form-row">
-              <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputCity" placeholder="Correo electronico" name="correo">
-            </div>
-              <div class="form-group col-md-4">
-                    <select id="inputState" class="form-control" name="rol">
-                  <option selected="" disabled="">Rubro</option>
-                  <option>Estudiante</option>
-                  <option>Maestro</option>
-                </select>
+              <div class="form-group col-md-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                   <label class="form-check-label" for="gridCheck" style="color:White;">
+                     Aceptar terminos y condiciones
+                   </label>
+                </div>
               </div>
-              <div class="form-group col-md-2">
-                <input type="number" min="10" class="form-control" id="inputZip" placeholder="edad">
-              </div>
-            </div><div class="form-row">
-             <div class="form-group col-md-6">
-                    <select id="inputState" class="form-control">
-                  <option selected="" disabled="">Ciclo escolar</option>
-                  <option>2019A</option>
-                  <option>2019B</option>
-                </select>
-              </div>
-
-
-              <div class="form-group col-md-6">
-                  <select id="inputState" class="form-control">
-                <option selected="" disabled="">Tipo de rol</option>
-                <option>Maestro</option>
-                <option>Alumno</option>
-              </select>
-            </div>
-
-           
+              
             </div>
            <div class="content-btn">
               <button type="submit" class="btn div-boton">Registrar</button>

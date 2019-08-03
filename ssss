@@ -1,0 +1,35 @@
+[33mcommit c417b0e3540472206f29e922c386ba8de9c9df60[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: M1s4 <m1s4sk8@gmail.com>
+Date:   Thu Aug 1 13:20:49 2019 -0500
+
+    hasta aqui se usa el ORM de laravel para registrar usuarios, donde derivan todas las relaciones del sistema
+
+[33mcommit d61787bd4161aa837f8ead4a7bf9b319899c90ab[m
+Author: M1s4 <m1s4sk8@gmail.com>
+Date:   Wed Jul 31 13:43:30 2019 -0500
+
+    registro y login se encuentran terminados
+
+[33mcommit b36c6df31abb6b1882b11e3361ab68b0257c713d[m
+Author: M1s4 <misagl@hotmail.com>
+Date:   Tue Jul 30 18:00:43 2019 -0500
+
+    hasta aqui ya se esta manejando el ORM de eloquent
+
+[33mcommit 2be6729e26ea99af162afb148f0bc471b49501f6[m
+Author: Misael Gutiérrez <desarrollo4@nivelcreativo.com>
+Date:   Fri Jul 19 16:55:05 2019 -0500
+
+    se agrego imagen de la bd en workbrench
+
+[33mcommit 025671bb08bef402ff6c6d1f73090a0f74063b80[m
+Author: Misael Gutiérrez <desarrollo4@nivelcreativo.com>
+Date:   Fri Jul 19 16:49:12 2019 -0500
+
+    se agrego la carpeta db, contiene las bases de datos en .sql
+
+[33mcommit 6c295fd92643fab54dd33df54ce4d60207eeeff0[m[33m ([m[1;31morigin/pruebas[m[33m)[m
+Author: Misael Gutiérrez <desarrollo4@nivelcreativo.com>
+Date:   Fri Jul 19 16:39:45 2019 -0500
+
+    comit principal
