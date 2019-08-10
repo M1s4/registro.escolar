@@ -129,8 +129,12 @@ class RegistroController extends Controller
     public function admin(){
         $materias=DB::table('materias')->get();
         $usuarios=DB::table('usuarios')->get();
+        $profesores=DB::table('profesor')->get();
+        $ciclo=DB::table('cicloescolar')->get();
+
+
         
-          return view('admin', compact('materias', 'usuarios'));
+          return view('admin', compact('materias', 'usuarios','profesores','ciclo'));
         }
         
     public function users(){

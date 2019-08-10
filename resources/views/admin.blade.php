@@ -7,6 +7,7 @@
      
           <!--content-principal -->
            <div class="content-home">
+
                
               <!--content left -->
             <div class="content-left">
@@ -25,6 +26,18 @@
                          <a href=""> Ciclo escolar</a>
                       </div>
 
+                      <div class="ciclos-escolar">
+                         <a href=""> Materias</a>
+                      </div>
+                       
+                      <div class="ciclos-escolar">
+                         <a href=""> Profesores</a>
+                      </div>
+
+                      <div class="ciclos-escolar">
+                         <a href=""> Usuarios</a>
+                      </div>
+
                       <div class="salir">
 
                       </div>
@@ -34,9 +47,9 @@
               <!--fIN content left -->
 
               <!--content right -->
-              <div class="content-right">
+ <div class="content-right">
 
-              <div class="content-resultado">
+                <div class="content-resultado">
             <!--Aqui listamos de la tabla materias el nombre y el id de la materia -->
                  
             <!--Aqui divstamos de la tabla usuarios el nombre y el correo del usuario -->
@@ -44,46 +57,167 @@
                    
 
 
-          </div>
           
-      <table class="table table-borderless">
+          
+ <table class="table table-hover"> 
   <thead>
     <tr>
+      <th scope="col" class="table-info">Usuarios</th>
+      <th scope="col" class="table-info">Correo</th>
+      <th scope="col" class="table-info">Configuraciones</th>
+
+
+    </tr>
+  </thead>
+  <tbody class="">
+  @forelse ($usuarios as $usuarios) 
+    <tr>
+ 
+
+                  <td>
+                    
+                   <div class="nombre">                   
+                      {{ $usuarios ->nombre }}              
+                    </div>             
+                   
+               </td>
+
+               <td>
+                    
+                    <div class="correo">                   
+                       {{ $usuarios ->email }}              
+                     </div>             
+                    
+                </td>
+
+                
+               <td>
+                    
+                    <div class="iconos">                   
+                       <div><img src="images/ver.svg" alt=""> </div>
+                       <div><img src="images/editar.svg" alt=""> </div>
+                       <div><img src="images/delete.svg" alt=""> </div>
+                       <div><img src="images/add.svg" alt=""> </div>
+
+                     </div>             
+                    
+                </td>
+
+           
+            
+    </tr>
+    @empty
+                <div>No hay materias registradas</div>
+               @endforelse       
+
+    <tr>
+    </tr> 
+  </tbody>
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+
+     <!--Tabla de materias -->
+  <table class="table table-borderless">
+  <thead>
+    <tr>
+
       <th scope="col">Materias</th>
-      <th scope="col">Usuarios</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Handle</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+   
+      @forelse ($materias as $materias)
+      <tr>
+     
+
+          <td> 
+            <div class="materia">        
+                {{ $materias ->nombre }}
+            </div>
+           @empty
+             <div>No se registraron usuarios</div>
+        
+        </td>
+    </tr> 
+    @endforelse
+      
+  </tbody>
+</table>
+    
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Ciclo activo</th>
+    
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> @forelse ($materias as $materias)
-                      
-                      <div class="materia">        
-                     
-                      {{ $materias ->nombre }}
-                      
-                      </div>
-                  @empty
-                   <div>No se registraron usuarios</div>
-                  @endforelse</td>
-                  <td>
-    @forelse ($usuarios as $usuarios)                  
+    <td>
+    @forelse ($ciclo as $ciclo)                  
                    <div class="nombre">                   
-                      {{ $usuarios ->nombre }}              
+                      {{ $ciclo ->nombre }}              
+                    </div>             
+               @empty
+                <div>No hay materias registradas</div>
+               @endforelse               
+    </td>
+    </tr> 
+  </tbody>
+</table>
+<!-- -->
+
+<!-- -->
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Profesores</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>
+    @forelse ($profesores as $profesores)                  
+                   <div class="nombre">                   
+                      {{ $profesores ->nombre }}              
                     </div>             
                @empty
                 <div>No hay materias registradas</div>
                @endforelse               
                </td>
-    </tr>
-    <tr>
     </tr> 
   </tbody>
 </table>
-         
+<!-- -->
 
-              </div>
+
+
+
+
+
+
+     </div>
+   <!-- Fin de  content-right-->
+
+
+
+
+
+
+
+
               <!--FINcontent left -->
           
           <!--fin content principal -->

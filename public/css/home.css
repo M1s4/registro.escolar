@@ -12,6 +12,7 @@
 
   .content-left {
      width:20%;
+     padding: 15px 15px;
     background-color: #bd5d38;
   }
 
@@ -64,17 +65,48 @@
   }
 
   .content-menu-user a:hover{
-
     color:#fff;
     text-decoration: none;
   }
 
   img.img_perfil {
     border: 10px solid#FAE5D3;
-
   }
 
   .content-right > li {
     color:black !important;
     text-decoration: none !important;
   }
+
+  .content-resultado {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  .content-resultado > table{
+background:#D8D8D8;
+      width:20%;
+      font-size: 1rem;
+      font-family: "Monospace";
+      border: 1px solid rgba(89,0,0, 0.1);
+      margin:10px 10px;
+  }
+
+  .content-resultado > table > tbody{
+     background:#ECF0F1;
+  }
+
+   .iconos{
+     display:flex;
+   }
+
+  .iconos img{
+     width:20px;
+     margin:5px 10px;
+  }
+
+  thead{
+    background-color: #bee5eb !important;
+  }
+
+  

@@ -14,7 +14,7 @@ class AgregarAlumnos extends Seeder
 
     //Hacemos referencia a la tabla para poderle insertar datos de
     //forma harcodeada xD
-        Users::create('alumnos')->insert([
+        Users::create('students')->insert([
             'nombre'=> 'Misael Gutierrez',
             'edad'=>'26',
             'pass'=>bcrypt('12345'),
